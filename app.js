@@ -5,7 +5,8 @@ var mongoose= require("mongoose");
 var covid=require("./model/contact");
 var seedDB=require("./seed");
 var app=express();
-mongoose.connect("mongodb://localhost/covid");
+//mongoose.connect("mongodb://localhost/covid");
+mongoose.connect("mongodb+srv://shailja:shailja123@cluster-sayxm.mongodb.net/test?retryWrites=true&w=majority");
 app.use(express.static("public"));
 app.use(bodyParse.urlencoded({extended:true}));
 
