@@ -1,0 +1,103 @@
+<%- include("partials/header") %>
+<marquee>STAY HOME STAY SAFE...जाको राखे साइयां, मार सके न कोय</marquee>
+<div class="jumbotron rounded-bottom">
+  <h1 class="display-4">Covid-19 Tracker</h1>
+  <p class="lead">You can track here number of people affected all over word,
+  you can have look to maps,graph and go to help to see quarentine center,hospital,doctor,helpline number. You can go to online order to see contacts from where to order necessity goods online. </p>
+  <hr class="my-4">
+  <p>Stay Home Stay Safe.</p>
+</div>
+
+<h2 style="text-align:center; color:red "> Total Case </h2>
+<div class="row">
+	<div class="col-md-2">
+		<div class="card text-center">
+    <div class="card-body">
+      <h5 class="card-title">New Confirmed</h5>
+      <p class="card-text" id="t1"><%= newconfirmed %></p>
+    </div>
+  </div>
+		</div>
+	<div class="col-md-2">
+		<div class="card text-center">
+    <div class="card-body">
+      <h5 class="card-title">Total Confirmed</h5>
+      <p class="card-text" id="t1"><%= totalconfirmed %></p>
+    </div>
+  </div>
+		</div>
+		<div class="col-md-2">
+		<div class="card text-center">
+    <div class="card-body">
+      <h5 class="card-title">New Death</h5>
+      <p class="card-text" id="t1"><%= newdeath %></p>
+    </div>
+  </div>
+		</div>
+		<div class="col-md-2">
+		<div class="card text-center">
+    <div class="card-body">
+      <h5 class="card-title">Total Deaths</h5>
+      <p class="card-text" id="t1"><%= totaldeath %></p>
+    </div>
+  </div>
+		</div>
+		<div class="col-md-2">
+		<div class="card text-center">
+    <div class="card-body">
+      <h5 class="card-title">New Recoverd</h5>
+      <p class="card-text" id="t1"><%=newrecovered%></p>
+    </div>
+  </div>
+		</div>
+		<div class="col-md-2">
+		<div class="card text-center">
+    <div class="card-body">
+      <h5 class="card-title">Total Recovered</h5>
+      <p class="card-text" id="t1"><%= totalrecovered%></p>
+    </div>
+  </div>
+		</div>
+
+</div>
+<br>
+<div>
+  <h2 style="text-align:center; color:red "> Record ALL Over The World </h2>
+</div>
+<div>
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Country</th>
+      <th scope="col">New Confirmed</th>
+      <th scope="col">Total Confirmed</th>
+      <th scope="col">New Deaths</th>
+      <th scope="col">Total Deaths</th>
+       <th scope="col">New Recoverd</th>
+        <th scope="col">Total Recoverd</th>
+    </tr>
+  </thead>
+  <tbody>
+
+      <% data.forEach(function(d){%>
+      <tr>
+      <td><%=d.Country %></td>
+      <td><%=d.NewConfirmed %></td>
+      <td><%= d.TotalConfirmed %></td>
+      <td><%= d.NewDeaths %></td>
+      <td><%= d.TotalDeaths %></td>
+      <td><%= d.NewRecovered %></td>
+      <td><%= d.TotalRecovered %></td>
+    </tr>
+    <% });%>
+    
+  </tbody>
+</table>
+
+</div>
+
+
+
+<%- include("partials/footer") %>
+
+

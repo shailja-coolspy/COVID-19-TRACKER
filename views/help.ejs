@@ -1,0 +1,29 @@
+<%- include("partials/header") %>
+<p><h3>Central Helpline Number for corona-virus: - <a href="tel:+91-11-23978046">+91-11-23978046</a></h3></p>
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">State</th>
+      <th scope="col">Contact</th>
+    </tr>
+  </thead>
+  <tbody>
+ 
+
+    	 <% covid.forEach(function(d){%>
+  	  <tr>
+    <td><%=d.State%></td>
+      <td><a href="tel:<%=d.Contact%>"><%=d.Contact%></a></td>
+    
+ </tr>
+  	<%})%>
+   
+  </tbody>
+</table>
+  
+
+
+
+<%- include("partials/footer") %>
