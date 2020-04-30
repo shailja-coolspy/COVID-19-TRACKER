@@ -10,7 +10,7 @@
 
 <h2 style="text-align:center; color:red "> Total Case </h2>
 <div class="row">
-	<div class="col-md-2">
+	<div class="col-md-2 col-sm-2">
 		<div class="card text-center">
     <div class="card-body">
       <h5 class="card-title">New Confirmed</h5>
@@ -18,7 +18,7 @@
     </div>
   </div>
 		</div>
-	<div class="col-md-2">
+	<div class="col-md-2 col-sm-2">
 		<div class="card text-center">
     <div class="card-body">
       <h5 class="card-title">Total Confirmed</h5>
@@ -26,7 +26,7 @@
     </div>
   </div>
 		</div>
-		<div class="col-md-2">
+		<div class="col-md-2 col-sm-2">
 		<div class="card text-center">
     <div class="card-body">
       <h5 class="card-title">New Death</h5>
@@ -34,7 +34,7 @@
     </div>
   </div>
 		</div>
-		<div class="col-md-2">
+		<div class="col-md-2 col-sm-2">
 		<div class="card text-center">
     <div class="card-body">
       <h5 class="card-title">Total Deaths</h5>
@@ -42,7 +42,7 @@
     </div>
   </div>
 		</div>
-		<div class="col-md-2">
+		<div class="col-md-2 col-sm-2">
 		<div class="card text-center">
     <div class="card-body">
       <h5 class="card-title">New Recoverd</h5>
@@ -50,7 +50,7 @@
     </div>
   </div>
 		</div>
-		<div class="col-md-2">
+		<div class="col-md-2 col-sm-2">
 		<div class="card text-center">
     <div class="card-body">
       <h5 class="card-title">Total Recovered</h5>
@@ -64,37 +64,69 @@
 <div>
   <h2 style="text-align:center; color:red "> Record ALL Over The World </h2>
 </div>
-<div>
+<div class="row">
   <table class="table">
   <thead>
     <tr>
+      <div class="col-md-2  col-sm-2">
       <th scope="col">Country</th>
+    </div>
+    <div class="col-md-2  col-sm-2">
       <th scope="col">New Confirmed</th>
+    </div>
+    <div class="col-md-2  col-sm-2">
       <th scope="col">Total Confirmed</th>
+    </div>
+    <div class="col-md-2  col-sm-2">
       <th scope="col">New Deaths</th>
+    </div>
+    <div class="col-md-2  col-sm-2">
       <th scope="col">Total Deaths</th>
+    </div>
+    <div class="col-md-2  col-sm-2">
        <th scope="col">New Recoverd</th>
+     </div>
+     <div class="col-md-2  col-sm-2">
         <th scope="col">Total Recoverd</th>
+      </div>
     </tr>
   </thead>
   <tbody>
 
       <% data.forEach(function(d){%>
+      
       <tr>
+        <div class="col-md-2  col-sm-2">
       <td><%=d.Country %></td>
+    </div>
+    <div class="col-md-2  col-sm-2">
       <td><%=d.NewConfirmed %></td>
+    </div>
+    <div class="col-md-2  col-sm-2">
       <td><%= d.TotalConfirmed %></td>
+    </div>
+    <div class="col-md-2  col-sm-2">
       <td><%= d.NewDeaths %></td>
+    </div>
+    <div class="col-md-2  col-sm-2">
       <td><%= d.TotalDeaths %></td>
+    </div>
+    <div class="col-md-2  col-sm-2">
       <td><%= d.NewRecovered %></td>
+    </div>
+    <div class="col-md-2  col-sm-s2">
       <td><%= d.TotalRecovered %></td>
+    </div>
     </tr>
+  
     <% });%>
     
   </tbody>
 </table>
 
 </div>
+
+
 
 
 
